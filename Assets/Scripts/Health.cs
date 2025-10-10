@@ -16,9 +16,11 @@ public class Health : MonoBehaviour
     {
         
     }
-
+        
     public void TakeDamage( float amount )
     {
+        // Change the amount of damage based on armor value
+
         currentHealth = currentHealth - amount;
         if ( !IsAlive() )
         {
@@ -59,3 +61,5 @@ public class Health : MonoBehaviour
         }
     }
 }
+
+

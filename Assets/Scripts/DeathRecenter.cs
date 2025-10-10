@@ -6,8 +6,5 @@ public class DeathRecenter : Death
     {
         // Move the object back to 0,0,0
         transform.position = Vector3.zero;
-
-        // Also do the Die() from the parent (base) class
-        base.Die();
     }
 }
