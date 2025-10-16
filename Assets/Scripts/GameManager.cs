@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public float score;
+    public List<DamageOnOverlap> damageZones;
 
 
     void Awake()
@@ -16,6 +18,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Start with an empty list
+        damageZones = new List<DamageOnOverlap>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
